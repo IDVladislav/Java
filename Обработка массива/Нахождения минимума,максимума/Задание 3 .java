@@ -21,21 +21,17 @@ public class Main {
             System.out.println(i + " = " + arr[i]);
         }
         //Вывели массив,начинаем преобразования ниже
-        int  max = arr[0];
-        for (int c = 0 ; c < g;c++ ) {
-             for (int i = 0; i < 5; i++) {
-                if (arr[c] > max) {
-                    max = arr[i];
-
-                }
-             }
-           if (arr[c] ==  max) {
-               schet = schet + 1;
-           }
-
+         int max = arr[0];
+        for(int i = 0 ; i < g ; i++){
+            if (arr[i] > max){
+                max = arr[i];
+            }
         }
-        System.out.println(max);
-        System.out.println(" Максимальное значение : " + max);
-        System.out.println(" Количество максимальных : "+ schet);
+        for(int i = 0 ; i < g ; i++) {
+            if (arr[i] == max) {
+                schet = schet + 1;
+            }
+        }
+        System.out.println(" Макимальных элементов : " + schet);
     }
 }
