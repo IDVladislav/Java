@@ -1,10 +1,10 @@
+
 package com.company;
 import java.io.*;
 import java.nio.file.Path;
 import java.util.Scanner;
 public class Main {
-    private int sum;
-
+    public int sum;
     public static void main(String[] args) throws Exception {
         System.out.println("Сколько чисел записано в файле");
         Scanner a1 = new Scanner(System.in);
@@ -25,10 +25,12 @@ public class Main {
             for(int u = 1 ; u <arr.length ;u++){
                sum = sum + arr[u];
             }
+            int summa = sum/a;
+       String res = Integer.toString(summa);
 
             System.out.println("Среднее арифметическое :" + sum/a);
             FileWriter result = new FileWriter("Result");
-            result.write( sum);
+            result.write(res);
             result.close();
         }
 
